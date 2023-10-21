@@ -1,0 +1,11 @@
+__history
+__recovery
+modules
+*.dll
+*.pdb
+**Win32**
+*.exe
+*.dproj.local
+*.identcache
+*.res
+*.groupproj.local

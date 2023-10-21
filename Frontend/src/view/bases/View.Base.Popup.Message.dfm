@@ -1,0 +1,102 @@
+inherited FrmBaseMessage: TFrmBaseMessage
+  Caption = 'FrmBaseMessage'
+  ClientHeight = 276
+  ClientWidth = 275
+  Color = clWhite
+  ExplicitWidth = 275
+  ExplicitHeight = 276
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnBackground: TPanel
+    Left = 0
+    Top = 0
+    Width = 275
+    Height = 276
+    Align = alClient
+    BevelEdges = []
+    BevelOuter = bvNone
+    TabOrder = 0
+    object pnDescription: TPanel
+      Left = 0
+      Top = 24
+      Width = 275
+      Height = 44
+      Align = alTop
+      BevelEdges = []
+      BevelOuter = bvNone
+      TabOrder = 0
+      object lbDescription: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 269
+        Height = 38
+        Align = alClient
+        Alignment = taCenter
+        Caption = 'Some description'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 9200741
+        Font.Height = -13
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        Layout = tlCenter
+        WordWrap = True
+        ExplicitWidth = 99
+        ExplicitHeight = 16
+      end
+    end
+    object pnControls: TPanel
+      Left = 0
+      Top = 188
+      Width = 275
+      Height = 88
+      Align = alClient
+      BevelEdges = []
+      BevelOuter = bvNone
+      Padding.Left = 10
+      Padding.Top = 29
+      Padding.Bottom = 11
+      TabOrder = 1
+    end
+    object pnHeader: TPanel
+      Left = 0
+      Top = 0
+      Width = 275
+      Height = 24
+      Align = alTop
+      BevelEdges = []
+      BevelOuter = bvNone
+      Caption = 'Header!'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 6110509
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+    end
+    object pnImage: TPanel
+      Left = 0
+      Top = 68
+      Width = 275
+      Height = 120
+      Align = alTop
+      BevelEdges = []
+      BevelOuter = bvNone
+      TabOrder = 3
+      object Image1: TImage
+        Left = 0
+        Top = 0
+        Width = 275
+        Height = 120
+        Align = alClient
+        Center = True
+        ExplicitLeft = 56
+        ExplicitTop = 56
+        ExplicitWidth = 105
+        ExplicitHeight = 105
+      end
+    end
+  end
+end

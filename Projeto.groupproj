@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8F2EF2FA-0A08-48D7-B30D-B026DE911C7F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Frontend\Frontend.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Backend\Business\Backend.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Backend\Reports\Reports.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Frontend">
+        <MSBuild Projects="Frontend\Frontend.dproj"/>
+    </Target>
+    <Target Name="Frontend:Clean">
+        <MSBuild Projects="Frontend\Frontend.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Frontend:Make">
+        <MSBuild Projects="Frontend\Frontend.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Backend">
+        <MSBuild Projects="Backend\Business\Backend.dproj"/>
+    </Target>
+    <Target Name="Backend:Clean">
+        <MSBuild Projects="Backend\Business\Backend.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Backend:Make">
+        <MSBuild Projects="Backend\Business\Backend.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Reports">
+        <MSBuild Projects="Backend\Reports\Reports.dproj"/>
+    </Target>
+    <Target Name="Reports:Clean">
+        <MSBuild Projects="Backend\Reports\Reports.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Reports:Make">
+        <MSBuild Projects="Backend\Reports\Reports.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Frontend;Backend;Reports"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Frontend:Clean;Backend:Clean;Reports:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Frontend:Make;Backend:Make;Reports:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
