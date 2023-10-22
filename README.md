@@ -20,7 +20,7 @@ Sendo que os servidores são divididos em:
 Para compilar o projeto é necessário que as dependências do projeto sejam adicionadas. No desenvolvimento do projeto foi utilizado o BOSS como gerenciador de dependências. Entretanto, as dependências podem ser baixadas e adicionadas manualmente ao projeto.
 </br>
 
-### Instalação das dependências utilizando o Boss </br>
+### Instalação das dependências utilizando o Boss 
 
 - Acessar o diretório do projeto que deseja baixar as dependências;
 - Abrir o diretório no terminal e digitar o comando “boss i”;
