@@ -44,7 +44,7 @@ begin
     DriverID := 'PG';
     Database := 'tcc';
     UserName := 'postgres';
-    Password := '@PG9247dBa_';
+    Password := 'your-password';
     Add('CharacterSet=utf8');
   end;
   LConnectionPool.Items[Result].Connected := True;
